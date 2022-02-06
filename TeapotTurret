@@ -638,7 +638,7 @@ tool.Activated:Connect(function()
 				active = true
 				targetval.Value = plrs[i].Name
 				
-				wait(4)
+				wait(8)
 				active = false
 				game.Players.LocalPlayer.Character.UsingMouse.Value = true
 				targetval.Value = ""
@@ -659,7 +659,7 @@ end)
 local active = false
 
 local head = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("Head")
-local count = 2
+local counte = 2
 
 
 game["Run Service"].Heartbeat:Connect(function(delta)
@@ -668,11 +668,11 @@ game["Run Service"].Heartbeat:Connect(function(delta)
 
 	repeat
 		wait(1)
-		if count > 1 then
+		if counte > 1 then
 			wait(1)
 			if shieldenabled == true then
 				wait(1)
-				count = count - 1
+				counte = counte - 1
 				active = true
 				wait(1)
 				
@@ -684,12 +684,12 @@ game["Run Service"].Heartbeat:Connect(function(delta)
 				explosion.Parent = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("Head")
 				explosion.Position = attach2.WorldPosition
 			end
-		elseif count <=1 then
+		elseif counte <=1 then
 			wait(1)
 			active = false
 		end	
 	until active == false
-	count = 2
+	counte = 2
 end)
 
 
