@@ -605,7 +605,7 @@ Align(spinpart,game.Players.LocalPlayer.Character:FindFirstChild("Torso"),Vector
 spinpart.Transparency = 1
 local attach2 = Instance.new("Attachment")
 attach2.Parent = spinpart
-attach2.Position = Vector3.new(0, 0, 23)
+attach2.Position = Vector3.new(0, 0, 35)
 
 tool.Activated:Connect(function()
 	local head = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("Head")
@@ -628,16 +628,18 @@ tool.Activated:Connect(function()
 
 
 
-
 	for i = 1, #plrs do
 		local magn = (plrs[i].Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-		if magn < 35 then
+		if magn < 40 and magn > 9 then
 			if plrs[i].Name ~= game.Players.LocalPlayer.Name then
+				
 				game.Players.LocalPlayer.Character.UsingMouse.Value = false
-
-				targetval.Value = plrs[i].Name
 				game.Players.LocalPlayer.Character.Value.Value = true
-				wait(cooldown)
+				active = true
+				targetval.Value = plrs[i].Name
+				
+				wait(4)
+				active = false
 				game.Players.LocalPlayer.Character.UsingMouse.Value = true
 				targetval.Value = ""
 				game.Players.LocalPlayer.Character.Value.Value = false
@@ -657,10 +659,12 @@ end)
 local active = false
 
 local head = game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Name]:FindFirstChild("Head")
+local count = 2
+
 
 game["Run Service"].Heartbeat:Connect(function(delta)
 	
-	local count = 150
+	
 
 	repeat
 		wait(1)
@@ -671,7 +675,8 @@ game["Run Service"].Heartbeat:Connect(function(delta)
 				count = count - 1
 				active = true
 				wait(1)
-				spinpart.AthO_3.CFrame = spinpart.AthO_3.CFrame * CFrame.Angles(0,0.2,0)
+				
+				spinpart.AthO_3.CFrame = spinpart.AthO_3.CFrame * CFrame.Angles(math.random(0,1)/2,math.random(0,1)/2,math.random(0,1)/2)
 				local explosion = Instance.new("Explosion")
 				explosion.Position = head.Position + Vector3.new(0,5,0)
 				explosion.DestroyJointRadiusPercent = 0
@@ -684,9 +689,8 @@ game["Run Service"].Heartbeat:Connect(function(delta)
 			active = false
 		end	
 	until active == false
-	count = 150
+	count = 2
 end)
-
 
 
 
