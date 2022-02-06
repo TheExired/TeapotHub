@@ -1,0 +1,604 @@
+
+
+local player = game.Players.LocalPlayer
+
+repeat
+	wait()
+until player:FindFirstChild("PlayerGui")
+local gui = player.PlayerGui
+
+if gui:FindFirstChild("TeapotHub") then
+	gui.ElixirFEHub:Destroy()
+end
+local closed = false
+
+--//Script Functions//--
+local function TeapotTurret()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TheExired/TeapotHub/main/TeapotTurret"))()
+	
+	
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+local screen = Instance.new("ScreenGui")
+screen.Name = "TeapotHub"
+screen.ResetOnSpawn = false
+screen.Parent = gui
+
+local base = Instance.new("Frame")
+base.Size = UDim2.new(0, 531,0, 344)
+base.Position = UDim2.new(0.336, 0,0.236, 0)
+base.ZIndex = 999999
+base.BackgroundColor3 = Color3.new(0.819608, 0.588235, 0.12549)
+base.BorderSizePixel = 0
+base.BackgroundTransparency = 1
+base.Parent = screen
+
+local main = Instance.new("Frame")
+main.Size = UDim2.new(1,0,1,0)
+main.Name = "Main2"
+main.Position = UDim2.new(0,0,0,0)
+main.ZIndex = 0
+main.BackgroundColor3 = Color3.new(0.819608, 0.588235, 0.12549)
+main.BorderSizePixel = 0
+main.Parent = base
+
+local topbar = Instance.new("Frame")
+topbar.Size = UDim2.new(1,0,0.091,0)
+topbar.Name = "Topbar"
+topbar.Position = UDim2.new(0,0,0,0)
+topbar.ZIndex = 1
+topbar.BackgroundColor3 = Color3.new(0.835294, 0.686275, 0.301961)
+topbar.BorderSizePixel = 0
+topbar.Parent = base
+
+local topbar2 = Instance.new("Frame")
+topbar2.Size = UDim2.new(1,0,0.647,0)
+topbar2.Name = "block"
+topbar2.Position = UDim2.new(0,0,0.353,0)
+topbar2.ZIndex = 0
+topbar2.BackgroundColor3 = Color3.new(0.835294, 0.686275, 0.301961)
+topbar2.BorderSizePixel = 0
+topbar2.Parent = topbar
+
+local closez = Instance.new("TextButton")
+closez.Size = UDim2.new(0.061,0,1,0)
+closez.Name = "OpenClose"
+closez.Position = UDim2.new(0.937,0,0,0)
+closez.ZIndex = 1
+closez.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+closez.BorderSizePixel = 0
+closez.BackgroundTransparency = 1
+closez.Text = "-"
+closez.TextColor3 = Color3.new(1, 1, 1)
+closez.TextScaled = true
+closez.Parent = topbar
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(0.829,0,1,0)
+title.Name = "title"
+title.Position = UDim2.new(0.079,0,0,0)
+title.ZIndex = 1
+title.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+title.BorderSizePixel = 0
+title.BackgroundTransparency = 1
+title.Text = "Teapot Hub"
+title.Font = Enum.Font.Highway
+title.TextColor3 = Color3.new(1, 1, 1)
+title.TextSize = 20
+title.TextXAlignment = Enum.TextXAlignment.Left
+title.Parent = topbar
+
+local imagetitle = Instance.new("ImageLabel")
+imagetitle.Size = UDim2.new(0.062,0,1,0)
+imagetitle.Name = "image"
+imagetitle.Position = UDim2.new(0,0,0,0)
+imagetitle.ZIndex = 1
+imagetitle.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+imagetitle.BorderSizePixel = 0
+imagetitle.BackgroundTransparency = 1
+imagetitle.Image = "http://www.roblox.com/asset/?id=8746299073"
+imagetitle.Parent = topbar
+
+local uicorner1 = Instance.new("UICorner")
+uicorner1.CornerRadius = UDim.new(0, 8)
+uicorner1.Parent = topbar
+
+local uicorner2 = Instance.new("UICorner")
+uicorner2.CornerRadius = UDim.new(0, 8)
+uicorner2.Parent = main
+
+local sidebar = Instance.new("Frame")
+sidebar.Size = UDim2.new(0.198,0,0.864,0)
+sidebar.Name = "Sidebar"
+sidebar.Position = UDim2.new(0.014,0,0.112,0)
+sidebar.ZIndex = 2
+sidebar.BackgroundColor3 = Color3.new(0.839216, 0.666667, 0.231373)
+sidebar.BorderSizePixel = 0
+sidebar.Parent = base
+
+local buttonside = Instance.new("Frame")
+buttonside.Size = UDim2.new(0.903,0,0.958,0)
+buttonside.Name = "Buttons"
+buttonside.Position = UDim2.new(0.048,0,0.021,0)
+buttonside.ZIndex = 2
+buttonside.BackgroundColor3 = Color3.new(1,1,1)
+buttonside.BorderSizePixel = 0
+buttonside.BackgroundTransparency = 1
+buttonside.Parent = sidebar
+
+local uilist = Instance.new("UIListLayout")
+uilist.VerticalAlignment = Enum.VerticalAlignment.Top
+uilist.SortOrder = Enum.SortOrder.LayoutOrder
+uilist.HorizontalAlignment = Enum.HorizontalAlignment.Center
+uilist.FillDirection = Enum.FillDirection.Vertical
+uilist.Padding = UDim.new(0,5)
+uilist.Parent = buttonside
+
+local homebutton = Instance.new("TextButton")
+homebutton.Size = UDim2.new(0.978,0,0.115,0)
+homebutton.Name = "Home"
+homebutton.Position = UDim2.new(0.011,0,0,0)
+homebutton.ZIndex = 2
+homebutton.BackgroundColor3 = Color3.new(0.282353, 0.282353, 0.282353)
+homebutton.BorderSizePixel = 0
+homebutton.BackgroundTransparency = 1
+homebutton.Text = "Home"
+homebutton.TextColor3 = Color3.new(1,1,1)
+homebutton.TextScaled = false
+homebutton.TextSize = 14
+homebutton.RichText = true
+homebutton.Parent = buttonside
+
+local scripthubbutton = Instance.new("TextButton")
+scripthubbutton.Size = UDim2.new(0.978,0,0.115,0)
+scripthubbutton.Name = "ScriptHub"
+scripthubbutton.Position = UDim2.new(0.011,0,0,0)
+scripthubbutton.ZIndex = 2
+scripthubbutton.BackgroundColor3 = Color3.new(0.282353, 0.282353, 0.282353)
+scripthubbutton.BorderSizePixel = 0
+scripthubbutton.BackgroundTransparency = 1
+scripthubbutton.Text = "Scripts"
+scripthubbutton.TextColor3 = Color3.new(1,1,1)
+scripthubbutton.TextScaled = false
+scripthubbutton.TextSize = 14
+scripthubbutton.RichText = true
+scripthubbutton.Parent = buttonside
+
+local settingsbutton = Instance.new("TextButton")
+settingsbutton.Size = UDim2.new(0.978,0,0.115,0)
+settingsbutton.Name = "Settings"
+settingsbutton.Position = UDim2.new(0.011,0,0,0)
+settingsbutton.ZIndex = 2
+settingsbutton.BackgroundColor3 = Color3.new(0.282353, 0.282353, 0.282353)
+settingsbutton.BorderSizePixel = 0
+settingsbutton.BackgroundTransparency = 1
+settingsbutton.Text = "Settings"
+settingsbutton.TextColor3 = Color3.new(1,1,1)
+settingsbutton.TextScaled = false
+settingsbutton.TextSize = 14
+settingsbutton.RichText = true
+settingsbutton.Parent = buttonside
+
+local uicorner3 = Instance.new("UICorner")
+uicorner3.CornerRadius = UDim.new(0, 8)
+uicorner3.Parent = homebutton
+
+local uicorner4 = Instance.new("UICorner")
+uicorner4.CornerRadius = UDim.new(0, 8)
+uicorner4.Parent = scripthubbutton
+
+local uicorner5 = Instance.new("UICorner")
+uicorner5.CornerRadius = UDim.new(0, 8)
+uicorner5.Parent = settingsbutton
+
+local uicorner6 = Instance.new("UICorner")
+uicorner6.CornerRadius = UDim.new(0, 8)
+uicorner6.Parent = sidebar
+
+
+
+
+
+
+
+
+
+
+
+
+
+--//Tabs Holder//--
+
+
+local tabsholder = Instance.new("Frame")
+tabsholder.Size = UDim2.new(0.759,0,0.864,0)
+tabsholder.Name = "TabsHolder"
+tabsholder.Position = UDim2.new(0.226,0,0.112,0)
+tabsholder.ZIndex = 1
+tabsholder.BackgroundColor3 = Color3.new(0.839216, 0.666667, 0.231373)
+tabsholder.BorderSizePixel = 0
+tabsholder.BackgroundTransparency = 0
+tabsholder.ClipsDescendants = true
+tabsholder.Parent = base
+
+local uicorner7 = Instance.new("UICorner")
+uicorner7.CornerRadius = UDim.new(0, 8)
+uicorner7.Parent = tabsholder
+
+--//Home//--
+
+local tabsholderhome = Instance.new("Frame")
+tabsholderhome.Size = UDim2.new(1.077,0,1,0)
+tabsholderhome.Name = "Home"
+tabsholderhome.Position = UDim2.new(-0.077,0,-0.003,0)
+tabsholderhome.ZIndex = 1
+tabsholderhome.BackgroundColor3 = Color3.new(0.839216, 0.666667, 0.231373)
+tabsholderhome.BorderSizePixel = 0
+tabsholderhome.BackgroundTransparency = 0
+tabsholderhome.Parent = tabsholder
+
+local uicorner8 = Instance.new("UICorner")
+uicorner8.CornerRadius = UDim.new(0, 8)
+uicorner8.Parent = tabsholderhome
+
+local welcome = Instance.new("TextLabel")
+welcome.Size = UDim2.new(0.837,0,0.578,0)
+welcome.Name = "WelcomeText"
+welcome.Position = UDim2.new(0.112,0,0.376,0)
+welcome.ZIndex = 1
+welcome.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+welcome.BorderSizePixel = 0
+welcome.BackgroundTransparency = 1
+welcome.Text = "Welcome to Teapot Hub " .. player.Name .. "!"
+welcome.Font = Enum.Font.ArialBold
+welcome.TextColor3 = Color3.new(1, 1, 1)
+welcome.TextSize = 20
+welcome.TextXAlignment = Enum.TextXAlignment.Center
+welcome.TextYAlignment = Enum.TextYAlignment.Top
+welcome.TextWrapped = true
+welcome.RichText = true
+welcome.Parent = tabsholderhome
+
+local disc = Instance.new("TextLabel")
+disc.Size = UDim2.new(0.837,0,0.154,0)
+disc.Name = "Discord"
+disc.Position = UDim2.new(0.112,0,0.8,0)
+disc.ZIndex = 1
+disc.BackgroundColor3 = Color3.new(0.313725, 0.588235, 1)
+disc.BorderSizePixel = 0
+disc.BackgroundTransparency = 1
+disc.Text = "Discord: https://discord.gg/EbGPemwR6D"
+disc.Font = Enum.Font.ArialBold
+disc.TextColor3 = Color3.new(0.313725, 0.588235, 1)
+disc.TextSize = 20
+disc.TextXAlignment = Enum.TextXAlignment.Center
+disc.TextYAlignment = Enum.TextYAlignment.Top
+disc.TextWrapped = true
+disc.RichText = true
+disc.Parent = tabsholderhome
+
+local imagehome = Instance.new("ImageLabel")
+imagehome.Size = UDim2.new(0.228,0,0.324,0)
+imagehome.Name = "image"
+imagehome.Position = UDim2.new(0.416,0,0.052,0)
+imagehome.ZIndex = 1
+imagehome.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+imagehome.BorderSizePixel = 0
+imagehome.BackgroundTransparency = 1
+imagehome.Image = "http://www.roblox.com/asset/?id=8746299073"
+imagehome.Parent = tabsholderhome
+
+--//ScriptHub//--
+
+local tabsholderscripthub = Instance.new("Frame")
+tabsholderscripthub.Size = UDim2.new(1.077,0,1,0)
+tabsholderscripthub.Name = "ScriptHub"
+tabsholderscripthub.Position = UDim2.new(0.998, 0,-0.003, 0)
+tabsholderscripthub.ZIndex = 1
+tabsholderscripthub.BackgroundColor3 = Color3.new(0.839216, 0.666667, 0.231373)
+tabsholderscripthub.BorderSizePixel = 0
+tabsholderscripthub.BackgroundTransparency = 0
+tabsholderscripthub.Parent = tabsholder
+
+local uicorner8 = Instance.new("UICorner")
+uicorner8.CornerRadius = UDim.new(0, 8)
+uicorner8.Parent = tabsholderscripthub
+
+local scrollframe = Instance.new("ScrollingFrame")
+scrollframe.Size = UDim2.new(1,0,1,0)
+scrollframe.Position = UDim2.new(0,0,0,0)
+scrollframe.ZIndex = 1
+scrollframe.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+scrollframe.BorderSizePixel = 0
+scrollframe.BackgroundTransparency = 1
+scrollframe.ScrollBarImageColor3 = Color3.new(0.243137, 0.243137, 0.309804)
+scrollframe.Parent = tabsholderscripthub
+
+local uilist2 = Instance.new("UIListLayout")
+uilist2.VerticalAlignment = Enum.VerticalAlignment.Top
+uilist2.SortOrder = Enum.SortOrder.LayoutOrder
+uilist2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+uilist2.FillDirection = Enum.FillDirection.Vertical
+uilist2.Padding = UDim.new(0,2)
+uilist2.Parent = scrollframe
+
+--//Settings//--
+
+local tabsholdersettings = Instance.new("Frame")
+tabsholdersettings.Size = UDim2.new(1.077,0,1,0)
+tabsholdersettings.Name = "Settings"
+tabsholdersettings.Position = UDim2.new(0.998, 0,-0.003, 0)
+tabsholdersettings.ZIndex = 1
+tabsholdersettings.BackgroundColor3 = Color3.new(0.839216, 0.666667, 0.231373)
+tabsholdersettings.BorderSizePixel = 0
+tabsholdersettings.BackgroundTransparency = 0
+tabsholdersettings.Parent = tabsholder
+
+local uicorner8 = Instance.new("UICorner")
+uicorner8.CornerRadius = UDim.new(0, 8)
+uicorner8.Parent = tabsholdersettings
+
+local scrollframe2 = Instance.new("ScrollingFrame")
+scrollframe2.Size = UDim2.new(1,0,1,0)
+scrollframe2.Position = UDim2.new(0,0,0,0)
+scrollframe2.ZIndex = 1
+scrollframe2.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+scrollframe2.BorderSizePixel = 0
+scrollframe2.BackgroundTransparency = 1
+scrollframe2.ScrollBarImageColor3 = Color3.new(0.243137, 0.243137, 0.309804)
+scrollframe2.Parent = tabsholdersettings
+
+local uilist2 = Instance.new("UIListLayout")
+uilist2.VerticalAlignment = Enum.VerticalAlignment.Top
+uilist2.SortOrder = Enum.SortOrder.LayoutOrder
+uilist2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+uilist2.FillDirection = Enum.FillDirection.Vertical
+uilist2.Padding = UDim.new(0,2)
+uilist2.Parent = scrollframe2
+
+--local disce = Instance.new("TextLabel")
+--disce.Size = UDim2.new(0.837,0,0.154,0)
+--disce.Name = "Discord"
+--disce.Position = UDim2.new(0.112,0,0.8,0)
+--disce.ZIndex = 1
+--disce.BackgroundColor3 = Color3.new(0.313725, 0.588235, 1)
+--disce.BorderSizePixel = 0
+--disce.BackgroundTransparency = 1
+--disce.Text = "Discord: https://discord.gg/EbGPemwR6D"
+--disce.Font = Enum.Font.ArialBold
+--disce.TextColor3 = Color3.new(0.313725, 0.588235, 1)
+--disce.TextSize = 20
+--disce.TextXAlignment = Enum.TextXAlignment.Center
+--disce.TextYAlignment = Enum.TextYAlignment.Top
+--disce.TextWrapped = true
+--disce.RichText = true
+--disce.Parent = tabsholderhome
+
+
+
+
+
+
+--//Button Scripts//--
+
+local tabs = tabsholder
+
+for i,v in pairs(buttonside:GetChildren()) do
+	if v:IsA("TextButton") then
+		v.MouseButton1Click:Connect(function()
+			if tabs:FindFirstChild(v.Name) then
+				tabs:FindFirstChild(v.Name):TweenPosition(UDim2.new(-0.077,0,-0.003,0),"Out","Quint", 0.7, true) -- position of your first page like home or something
+				for a,e in pairs(tabs:GetChildren()) do
+					if e.Name ~= v.Name and not e:IsA("UICorner") then
+						e:TweenPosition(UDim2.new(0.998, 0,-0.003, 0),"Out","Quint", 0.5, true) -- position of the other pages for example executor or script hub
+					end
+				end
+			end
+		end)
+	end
+end
+
+
+
+
+closez.MouseButton1Down:Connect(function()
+	
+	if closed == true then
+		
+			main.Visible = true
+			sidebar.Visible = true
+			tabsholder.Visible = true
+			
+			closez.Text = "+"
+			closed = false
+		
+			
+			closez.Text = "+"
+			closed = false
+			
+	elseif closed == false then
+			main.Visible = false
+			sidebar.Visible = false
+			tabsholder.Visible = false
+			
+			closez.Text = "-"
+			closed = true
+		end
+end)
+
+
+
+
+
+
+
+--//Scripts//--
+
+--//TeapotTurret//--
+
+local teapotturret = Instance.new("TextButton")
+teapotturret.Size = UDim2.new(0.857,0,0.05,0)
+teapotturret.Name = "TeapotTurret"
+teapotturret.Position = UDim2.new(0.011,0,0,0)
+teapotturret.ZIndex = 2
+teapotturret.BackgroundColor3 = Color3.new(0.192157, 0.192157, 0.231373)
+teapotturret.BorderSizePixel = 0
+teapotturret.BackgroundTransparency = 0
+teapotturret.Text = "Teapot Turret"
+teapotturret.TextColor3 = Color3.new(1,1,1)
+teapotturret.TextScaled = true
+--settingsbutton.TextSize = 20
+teapotturret.RichText = true
+teapotturret.Parent = scrollframe
+
+local uicorner4 = Instance.new("UICorner")
+uicorner4.CornerRadius = UDim.new(0, 8)
+uicorner4.Parent = teapotturret
+
+teapotturret.MouseButton1Down:Connect(function()
+	TeapotTurret()
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+local UIS = game:GetService("UserInputService")
+function dragify(Frame)
+	dragToggle = nil
+	local dragSpeed = 0.50
+	dragInput = nil
+	dragStart = nil
+	local dragPos = nil
+	function updateInput(input)
+		local Delta = input.Position - dragStart
+		local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+		game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	end
+	Frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+			dragToggle = true
+			dragStart = input.Position
+			startPos = Frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	Frame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+		if input == dragInput and dragToggle then
+			updateInput(input)
+		end
+	end)
+end
+
+dragify(base)
+
+
+
+
+
+
+
+
+
+
+
