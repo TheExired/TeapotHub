@@ -638,7 +638,7 @@ tool.Activated:Connect(function()
 				active = true
 				targetval.Value = plrs[i].Name
 				
-				wait(4)
+				wait(2)
 				active = false
 				game.Players.LocalPlayer.Character.UsingMouse.Value = true
 				targetval.Value = ""
